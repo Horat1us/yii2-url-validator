@@ -1,0 +1,48 @@
+{
+  "name": "horat1us/yii2-url-validator",
+  "description": "Yii2 UrlValidator with single-label host support (http://localhost:8000)",
+  "type": "library",
+  "require": {
+    "php": ">=8.1",
+    "yiisoft/yii2": "^2.0.15"
+  },
+  "require-dev": {
+    "horat1us/yii2-asset-free": "^1.0",
+    "phpunit/phpunit": "^10.5",
+    "squizlabs/php_codesniffer": "^3.11"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexander Letnikow",
+      "email": "reclamme@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "config": {
+    "process-timeout": 1800,
+    "sort-packages": true,
+    "platform": {
+      "php": "8.1"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": false
+    }
+  },
+  "scripts": {
+    "lint": "./vendor/bin/phpcs --standard=PSR12 ./src ./tests",
+    "phpcbf": "./vendor/bin/phpcbf --standard=PSR12 ./src ./tests",
+    "test": "./vendor/bin/phpunit",
+    "cover": "./vendor/bin/phpunit --coverage-clover=coverage.xml"
+  },
+  "autoload": {
+    "psr-4": {
+      "Horat1us\\Yii\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Horat1us\\Yii\\Tests\\": "tests/"
+    }
+  }
+}
